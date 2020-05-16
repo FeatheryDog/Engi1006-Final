@@ -14,15 +14,15 @@ app = Flask(__name__)
 #static route
 @app.route("/")
 def test():
-    return render_template("index.html")
+    return render_template("home.html")
 
-@app.route("/1006")
-def site_1006():
-    return "<p>This is my <b>1006</b> website!</p>"
+@app.route("/pumpkin")
+def pumpkin():
+    return render_template("pumpkin.html")
 
-@app.route("/columbia")
+@app.route("/internet")
 def columbia():
-    return "Columbia!"
+    return render_template("internet.html")
 
 #start the server
 if __name__ == "__main__":
